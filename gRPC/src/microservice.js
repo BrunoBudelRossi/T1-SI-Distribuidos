@@ -1,5 +1,5 @@
 const grpc = require("grpc");
-const todoProto = grpc.load("./src/todo.proto");
+const todoProto = grpc.load("src/todo.proto");
 const server = new grpc.Server();
 
 const tasks = [
@@ -10,7 +10,7 @@ const tasks = [
 
 const changeData = (id, text, done) => {
     if (!text) text = "not found";
-    let res = { id, done, done: false };
+    let res = { id, text, done: false };
 
     for (let i = 0; i < tasks.length; i++) {
         if (tasks[i].id === id) {
@@ -22,8 +22,8 @@ const changeData = (id, text, done) => {
     return res;
 };
 
-server.addService(todoProto.Todo.service, {
-    insert: (err, callback) => {
+server.addService(todoProto.TodoService.service, {
+    insert: (call, callback) => {
         let task = call.request;
         let data = changeData(tasks.length + 1, task.text, false);
         if (task.text) {
@@ -31,12 +31,12 @@ server.addService(todoProto.Todo.service, {
             callback(null, data);
         }
     },
-    list: (err, callback) => {
+    list: (call, callback) => {
         callback(null, tasks);
     },
-    update: (err, callback) => {
+    update: (call, callback) => {
         let task = call.request;
-        callback(null, changeData(task.id, task.text, task.done)); // verificar funcionamento do parametro text
+        callback(null, changeData(task.id, task.text, task.done));
     },
 });
 

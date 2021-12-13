@@ -1,4 +1,4 @@
-sintax = "proto3";
+syntax = "proto3";
 
 service TodoService {
     rpc List (Empty) returns (Tasks) {}
