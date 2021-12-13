@@ -1,0 +1,40 @@
+.task {
+    width: 100%;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    justify-content: center;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-light-black);
+    padding: 18px 28px;
+}
+
+.task__checkbox {
+    visibility: hidden;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.task__checkbox::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 500px;
+    height: 24px;
+    background-color: rede;
+    border: 1px solid var(--color-light-black);
+    border-radius: 5px;
+}
+
+.task__description {
+    font-size: 1.125rem;
+    margin: 0 20px;
+}
+
+.task__button {
+    background: none;
+    border: none;
+}
