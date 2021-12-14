@@ -1,90 +1,90 @@
 *,
 :root {
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 
-    --color-blue: #30bced;
-    --color-grey: #ccc;
-    --color-black: #3c3c3c;
-    --color-light-black: #555555;
-    --color-white: #fffaff;
-    --color-hard-white: #fff;
+  --color-blue: #30bced;
+  --color-grey: #ccc;
+  --color-black: #3c3c3c;
+  --color-light-black: #555555;
+  --color-white: #fffaff;
+  --color-hard-white: #fff;
 }
 
 body {
-    color: var(--color-white);
-    background-color: var(--color-black);
+  color: var(--color-white);
+  background-color: var(--color-black);
 }
 
 .todoity {
-    margin: 0 auto;
-    max-width: 800px;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 .todoity__form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .todoity__header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .todoity__title {
-    font-family: serif;
-    font-weight: 700;
-    font-size: 4.5rem;
-    color: var(--color-blue);
-    margin: 50px 0 70px 0;
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 4.5rem;
+  color: var(--color-blue);
+  margin: 50px 0 70px 0;
 }
 
 .todoity__input {
-    width: 100%;
-    color: var(--color-white);
-    font-size: 1.5rem;
-    background-color: var(--color-black);
-    border: 1px solid var(--color-light-black);
-    padding: 18px 28px;
-    outline: none;
+  width: 100%;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  background-color: var(--color-black);
+  border: 1px solid var(--color-light-black);
+  padding: 18px 28px;
+  outline: none;
 }
 
 .todoity__input::placeholder {
-    color: #ccc;
+  color: #ccc;
 }
 
 .todoity__button {
-    color: var(--color-white);
-    font-weight: 700;
-    font-size: 1.125rem;
-    padding: 10px 15px;
-    margin: 25px 0 40px 0;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-blue);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 10px 15px;
+  margin: 25px 0 40px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-blue);
 }
 
 .todoity__content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .todoity__date {
-    font-size: 1.5rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .todoity__tasks {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    margin: 15px 0;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 15px 0;
+  padding: 0;
 }
